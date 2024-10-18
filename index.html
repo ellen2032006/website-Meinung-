@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teile deine Meinung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        textarea {
+            width: 60%;
+            height: 200px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Teile deine Meinung mit uns!</h1>
+    <p>Schreib deine Gedanken in das Textfeld unten und klick auf "Absenden".</p>
+    
+    <form action="javascript:void(0);">
+        <textarea id="meinung" placeholder="Deine Meinung..."></textarea><br><br>
+        <button onclick="absenden()">Absenden</button>
+    </form>
+
+    <script>
+        function absenden() {
+            var meinung = document.getElementById("meinung").value;
+            if (meinung) {
+                alert("Vielen Dank für deine Meinung: " + meinung);
+            } else {
+                alert("Bitte gib deine Meinung ein, bevor du absendest.");
+            }
+        }
+    </script>
+
+</body>
+</html>
